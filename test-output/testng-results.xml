@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="1" total="3" passed="2" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-12-09T19:31:06 IST" name="Default suite" finished-at="2025-12-09T19:31:41 IST" duration-ms="34633">
+    <groups>
+    </groups>
+    <test started-at="2025-12-09T19:31:06 IST" name="Default test" finished-at="2025-12-09T19:31:41 IST" duration-ms="34633">
+      <class name="tests.RS_PracticPage_Test">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.RS_PracticPage_Test@46d59067]" started-at="2025-12-09T19:31:06 IST" name="setUp" finished-at="2025-12-09T19:31:10 IST" duration-ms="3353" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testBookingFlow()[pri:1, instance:tests.RS_PracticPage_Test@46d59067]" started-at="2025-12-09T19:31:10 IST" name="testBookingFlow" finished-at="2025-12-09T19:31:25 IST" duration-ms="15684" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testBookingFlow -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.RS_PracticPage_Test@46d59067]" started-at="2025-12-09T19:31:25 IST" name="tearDown" finished-at="2025-12-09T19:31:26 IST" duration-ms="308" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.RS_PracticPage_Test@46d59067]" started-at="2025-12-09T19:31:26 IST" name="setUp" finished-at="2025-12-09T19:31:28 IST" duration-ms="2666" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="SearchFligthsBookings()[pri:2, instance:tests.RS_PracticPage_Test@46d59067]" started-at="2025-12-09T19:31:28 IST" name="SearchFligthsBookings" finished-at="2025-12-09T19:31:39 IST" duration-ms="11138" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SearchFligthsBookings -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.RS_PracticPage_Test@46d59067]" started-at="2025-12-09T19:31:39 IST" name="tearDown" finished-at="2025-12-09T19:31:41 IST" duration-ms="1197" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.RS_PracticPage_Test -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

@@ -1,0 +1,1 @@
+{"uuid":"8a822e21-0337-4610-a68e-b15ef468db5e","name":"tests.AppleHomePageTest.setUp","children":["15f55e4d-952b-4932-b2e3-9d9d54dab122"],"description":"","befores":[{"name":"setUp","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1763980290546,"stop":1763980290687}],"afters":[],"start":1763980290542,"stop":1763980290687}

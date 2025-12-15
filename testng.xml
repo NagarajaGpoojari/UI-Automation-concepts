@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="AppleTest" parallel="tests" thread-count="1">
+    <listeners>
+       <listener class-name="listeners.RetryListener"/>
+    </listeners>
+
+    <test name="ChromeAppleTest">
+        <parameter name="browser" value="chrome"/>
+        <parameter name="url" value="https://www.apple.com"/>
+        <classes>
+            <class name="tests.AppleHomePageTest"/>
+        </classes>
+    </test>
+
+    <test name="FirefoxBookingTest">
+        <parameter name="browser" value="firefox"/>
+        <parameter name="url" value="https://www.booking.com"/>
+        <classes>
+            <class name="tests.BookingPageTest"/>
+        </classes>
+    </test>
+</suite>
+
