@@ -1,22 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite thread-count="1" parallel="tests" name="Failed suite [AppleTest]" guice-stage="DEVELOPMENT">
+<suite thread-count="3" parallel="tests" name="Failed suite [AppleTest]" guice-stage="DEVELOPMENT">
   <listeners>
     <listener class-name="listeners.RetryListener"/>
   </listeners>
-  <test thread-count="1" parallel="tests" name="FirefoxBookingTest(failed)">
-    <parameter name="browser" value="firefox"/>
-    <parameter name="url" value="https://www.booking.com"/>
+  <test thread-count="3" parallel="tests" name="ChromeAppleTest(failed)">
+    <parameter name="browser" value="chrome"/>
+    <parameter name="url" value="https://www.apple.com"/>
     <classes>
-      <class name="tests.BookingPageTest">
+      <class name="tests.AppleHomePageTest">
         <methods>
           <include name="setUp"/>
-          <include name="tearDown"/>
           <include name="afterClassHook"/>
-          <include name="verifySearchBoxPresence"/>
+          <include name="tearDown"/>
           <include name="beforeClassHook"/>
+          <include name="setUp"/>
+          <include name="SearchProducts"/>
         </methods>
-      </class> <!-- tests.BookingPageTest -->
+      </class> <!-- tests.AppleHomePageTest -->
+    </classes>
+  </test> <!-- ChromeAppleTest(failed) -->
+  <test thread-count="3" parallel="tests" name="FirefoxBookingTest(failed)">
+    <parameter name="browser" value="firefox"/>
+    <parameter name="url" value="https://rahulshettyacademy.com/dropdownsPractise/"/>
+    <classes>
+      <class name="tests.RS_PracticPage_Test">
+        <methods>
+          <include name="testBookingFlow"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- tests.RS_PracticPage_Test -->
     </classes>
   </test> <!-- FirefoxBookingTest(failed) -->
 </suite> <!-- Failed suite [AppleTest] -->

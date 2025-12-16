@@ -34,8 +34,8 @@ public class RS_PracticePage {
 	private WebElement Flights;
 	@FindBy(xpath = "//table[@id=\"ctl00_mainContent_rbtnl_Trip\"]//tbody//input[@type=\"radio\" and @value=\"RoundTrip\"]")
 	private WebElement TripOptions;
-	// @FindBy(xpath = "//input[@id=\"ctl00_mainContent_ddl_originStation1_CTXT\"]")
-	// private WebElement DepartureDropDown;
+	@FindBy(xpath = "//input[@id=\"ctl00_mainContent_ddl_originStation1_CTXT\"]")
+	private WebElement DepartureDropDown;
 	@FindBy(xpath = "//input[@id=\"ctl00_mainContent_ddl_destinationStation1_CTXT\"]")
 	private WebElement DestDropDown;
 	@FindBy(xpath = "//input[@name=\"ctl00$mainContent$view_date1\"]")
@@ -68,7 +68,7 @@ public class RS_PracticePage {
 
 	// Select Departure City
 	public void selectDepartureCity(String cityName) {
-		WebElement dropdown = driver.findElement(By.id("ctl00_mainContent_ddl_originStation1_CTXT"));
+		WebElement dropdown = driver.findElement(By.xpath("//input[@id=\"ctl00_mainContent_ddl_originStation1_CTXT\"]"));
 		dropdown.click();
 		List<WebElement> cityOptions = driver.findElements(By.xpath(".//*[@id=\"dropdownGroup1\"]//a"));
 
@@ -131,9 +131,9 @@ public class RS_PracticePage {
 		wait.until(ExpectedConditions.elementToBeClickable(PassengersDropDown));
 		actions.moveToElement(PassengersDropDown).click().perform();
 		wait.until(ExpectedConditions.elementToBeClickable(adultPlusButton));
-		for (int i = 0; i < adults; i++) { // Already 1 Adult, add 2 more
+		for (int i = 0; i < adults; i++) { 
 			adultPlusButton.click();
-			Thread.sleep(500); // Optional for visual clarity
+			Thread.sleep(500); 
 		}
 		wait.until(ExpectedConditions.elementToBeClickable(childPlusButton));
 		for (int i = 0; i < children; i++) {
@@ -149,10 +149,10 @@ public class RS_PracticePage {
 		WebElement dropdown = driver.findElement(By.id("ctl00_mainContent_ddl_originStation1_CTXT"));
 		dropdown.click();
 
-		// Step 2: Locate all city options
+		
 		List<WebElement> cityOptions = driver.findElements(By.xpath(".//*[@id=\"dropdownGroup1\"]//a"));
 
-		// Step 3: Print all listed cities and select Adampur
+		
 		for (WebElement option : cityOptions) {
 			String cityName = option.getText().trim();
 			if (!cityName.isEmpty()) {
@@ -166,14 +166,14 @@ public class RS_PracticePage {
 			}
 		}
 
-		// Optional: Validate selection
+		
 		String selected = driver.findElement(By.id("ctl00_mainContent_ddl_originStation1_CTXT")).getAttribute("value");
 		System.out.println("Final Selected Departure: " + selected);
 
 		actions.moveToElement(DestDropDown).click().perform();
 		List<WebElement> DestcityOptions = driver.findElements(By.xpath(".//*[@id=\"dropdownGroup1\"]//ul//li//a"));
 
-		// Step 3: Print all listed cities and select Adampur
+		
 		for (WebElement option : DestcityOptions) {
 			String DestcityName = option.getText().trim();
 			if (!DestcityName.isEmpty()) {
@@ -197,7 +197,7 @@ public class RS_PracticePage {
 		String targetedReturnDay = "20";
 		
 
-		// Loop until desired month and year are visible
+		
 		while (true) {
 			String displayedMonthYear = driver.findElement(By.className("ui-datepicker-title")).getText();
 			if (displayedMonthYear.contains(targetMonth) && displayedMonthYear.contains(targetYear)) {
@@ -218,7 +218,7 @@ public class RS_PracticePage {
 			}
 		}
 
-		// Optional: verify selection
+		
 		String selectedDate = driver.findElement(By.id("ctl00_mainContent_view_date1")).getAttribute("value");
 		System.out.println("Selected Date: " + selectedDate);
 
@@ -234,16 +234,16 @@ public class RS_PracticePage {
 			}
 		}
 
-		// Optional: verify selection
+		
 		String selectedReturnDate = driver.findElement(By.id("ctl00_mainContent_view_date1")).getAttribute("value");
 		System.out.println("Selected Date: " + selectedReturnDate);
 
 		wait.until(ExpectedConditions.elementToBeClickable(PassengersDropDown));
 		actions.moveToElement(PassengersDropDown).click().perform();
 		wait.until(ExpectedConditions.elementToBeClickable(adultPlusButton));
-		for (int i = 0; i < 2; i++) { // Already 1 Adult, add 2 more
+		for (int i = 0; i < 2; i++) { 
 			adultPlusButton.click();
-			Thread.sleep(500); // Optional for visual clarity
+			Thread.sleep(500); 
 		}
 		wait.until(ExpectedConditions.elementToBeClickable(childPlusButton));
 		for (int i = 0; i < 2; i++) {

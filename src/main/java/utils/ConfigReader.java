@@ -14,7 +14,7 @@ public class ConfigReader {
             e.printStackTrace();
         }
     }
-    //AppleTest/src/main/resources/config.properties
+    
     public static String getProperty(String key) {
         return prop.getProperty(key);
     }

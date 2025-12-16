@@ -14,24 +14,24 @@ public class RS_PracticPage_Test {
 
 	@BeforeMethod
 	public void setUp() {
-		// Initialize browser (you can pass "chrome" or "firefox" based on your config)
+		
 		ConfigReader.loadProperties();
-		 DriverFactory.initDriver("chrome");
+		 DriverFactory.initDriver("firefox");
 		 DriverFactory.getDriver().get("https://rahulshettyacademy.com/dropdownsPractise/");
 		 page = new RS_PracticePage();
 	}
 
-	@Test(retryAnalyzer = retry.RetryAnalyzer.class, enabled=false)
+	@Test(retryAnalyzer = retry.RetryAnalyzer.class,priority=0, enabled=true)
 	public void verifyStoreLink() {
 		Assert.assertTrue(page.isFlightsLinkDisplayed(), "Flight link is not visible");
 	}
 
-	@Test(priority=2)
+	@Test(retryAnalyzer = retry.RetryAnalyzer.class,priority=1, enabled=true)
 	public void SearchFligthsBookings() throws InterruptedException {
 		page.HandleDropDown();
 
 	}
-	 @Test(priority=1)
+	@Test(retryAnalyzer = retry.RetryAnalyzer.class,priority=2, enabled=true)
 	    public void testBookingFlow() throws InterruptedException {
 	        page = new RS_PracticePage();
 	        

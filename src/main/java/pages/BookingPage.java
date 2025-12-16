@@ -14,7 +14,7 @@ public class BookingPage {
         PageFactory.initElements(driver, this);
     }
 
-    @FindBy(xpath= "//span[contains(text(),'Search')]") // Booking.com search box
+    @FindBy(xpath= "//span[contains(text(),'Search')]") 
     private WebElement searchBox;
 
     public boolean isSearchBoxDisplayed() {

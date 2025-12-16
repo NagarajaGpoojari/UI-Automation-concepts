@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 
-<suite name="AppleTest" parallel="tests" thread-count="1">
+<suite name="AppleTest" parallel="tests" thread-count="3">
     <listeners>
        <listener class-name="listeners.RetryListener"/>
     </listeners>
@@ -16,9 +16,9 @@
 
     <test name="FirefoxBookingTest">
         <parameter name="browser" value="firefox"/>
-        <parameter name="url" value="https://www.booking.com"/>
+        <parameter name="url" value="https://rahulshettyacademy.com/dropdownsPractise/"/>
         <classes>
-            <class name="tests.BookingPageTest"/>
+            <class name="tests.RS_PracticPage_Test"/>
         </classes>
     </test>
 </suite>

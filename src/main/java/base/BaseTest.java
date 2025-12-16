@@ -24,10 +24,10 @@ public abstract class BaseTest {
 
 	protected void log(String message) {
 		System.out.println("[LOG] " + message);
-		// You can extend this to use a logging framework like Log4j or SLF4J
+		
 	}
 
-	// Optional: Add hooks for custom setup/teardown
+	
 	@BeforeClass(alwaysRun = true)
 	public void beforeClassHook() {
 		log("Starting test class: " + this.getClass().getSimpleName());

@@ -36,7 +36,7 @@ public class DataDrivenTest extends BaseTest {
 
         System.out.println("Running on: " + browser + " | URL: " + url + " | Search: " + searchTerm);
 
-        // Add page interactions here...
+        
 
         DriverFactory.quitDriver();
         TestDataThreadManager.removeData();

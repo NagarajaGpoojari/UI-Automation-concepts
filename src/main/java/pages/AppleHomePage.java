@@ -108,9 +108,9 @@ public class AppleHomePage {
 			ShoppingBag.click();
 			wait.until(ExpectedConditions.elementToBeClickable(SignInLink)).click();
 			
-			// Switch to sign-in iframe
+			
 			wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(signInFrame));
-			// Enter credentials
+			
 			wait.until(ExpectedConditions.visibilityOf(NameField)).sendKeys(ConfigReader.getProperty(userName),
 					Keys.ENTER);
 			continueBtn.click();

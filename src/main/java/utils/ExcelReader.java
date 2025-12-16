@@ -12,7 +12,7 @@ public class ExcelReader {
     private static ExcelReader instance;
     private Workbook workbook;
 
-    // Private constructor
+    
     private ExcelReader(String excelPath) {
         try (FileInputStream fis = new FileInputStream(excelPath)) {
             workbook = WorkbookFactory.create(fis);
@@ -21,7 +21,7 @@ public class ExcelReader {
         }
     }
 
-    // Global access point
+    
     public static ExcelReader getInstance(String excelPath) {
         if (instance == null) {
             synchronized (ExcelReader.class) {
@@ -41,7 +41,7 @@ public class ExcelReader {
     }
 
 	public static List<Map<String, String>> getTestData(String string) {
-		// TODO Auto-generated method stub
+		
 		return null;
 	}
 }

@@ -16,19 +16,19 @@ public class AppleHomePageTest extends BaseTest {
 
 	@BeforeMethod
 	public void setUp() {
-		// Initialize browser (you can pass "chrome" or "firefox" based on your config)
+		
 		ConfigReader.loadProperties();
 	//	DriverFactory.initDriver("chrome");	
 	//	DriverFactory.getDriver().get("https://www.apple.com");
 		home = new AppleHomePage();
 	}
 
-	@Test(retryAnalyzer = retry.RetryAnalyzer.class)
+	@Test(retryAnalyzer = retry.RetryAnalyzer.class,priority=0, enabled=true)
 	public void verifyStoreLink() {
 		Assert.assertTrue(home.isStoreLinkDisplayed(), "Store link is not visible");
 	}
 
-	@Test()
+	@Test(retryAnalyzer = retry.RetryAnalyzer.class,priority=1, enabled=true)
 	public void userSignInTest() {
 		String userName = "UserName";
 		String password = "Password";
@@ -36,7 +36,7 @@ public class AppleHomePageTest extends BaseTest {
 		
 	}
 	
-	@Test()
+	@Test(retryAnalyzer = retry.RetryAnalyzer.class, priority=2, enabled=true)
 	public void SearchProducts() throws InterruptedException {
 		String ProductName="SearchProduct";
 		home.SearchItems(ProductName);
