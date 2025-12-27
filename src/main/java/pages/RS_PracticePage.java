@@ -34,7 +34,7 @@ public class RS_PracticePage {
 	private WebElement Flights;
 	@FindBy(xpath = "//table[@id=\"ctl00_mainContent_rbtnl_Trip\"]//tbody//input[@type=\"radio\" and @value=\"RoundTrip\"]")
 	private WebElement TripOptions;
-	@FindBy(xpath = "//input[@id=\"ctl00_mainContent_ddl_originStation1_CTXT\"]")
+	@FindBy(xpath = "//span[@id=\"ctl00_mainContent_ddl_originStation1_CTXTaction\"]")
 	private WebElement DepartureDropDown;
 	@FindBy(xpath = "//input[@id=\"ctl00_mainContent_ddl_destinationStation1_CTXT\"]")
 	private WebElement DestDropDown;
@@ -61,15 +61,15 @@ public class RS_PracticePage {
 		Flights.click();
 	}
 
-	// Select Trip Type
 	public void selectTripType() {
 		actions.moveToElement(TripOptions).click().perform();
 	}
 
-	// Select Departure City
 	public void selectDepartureCity(String cityName) {
-		WebElement dropdown = driver.findElement(By.xpath("//input[@id=\"ctl00_mainContent_ddl_originStation1_CTXT\"]"));
-		dropdown.click();
+	
+		WebElement dropdown = driver.findElement(By.id("ctl00_mainContent_ddl_originStation1_CTXT"));
+		actions.moveToElement(dropdown).click().perform();
+		
 		List<WebElement> cityOptions = driver.findElements(By.xpath(".//*[@id=\"dropdownGroup1\"]//a"));
 
 		for (WebElement option : cityOptions) {
@@ -84,7 +84,6 @@ public class RS_PracticePage {
 		System.out.println("Final Selected Departure: " + selected);
 	}
 
-	// Select Destination City
 	public void selectDestinationCity(String cityName) {
 		actions.moveToElement(DestDropDown).click().perform();
 		List<WebElement> destOptions = driver.findElements(By.xpath(".//*[@id=\"dropdownGroup1\"]//ul//li//a"));
@@ -102,7 +101,6 @@ public class RS_PracticePage {
 
 	}
 
-	// Select Date from Calendar
 	public void selectDate(WebElement calendarElement, String targetDay, String month, String year) {
 		actions.moveToElement(calendarElement).click().perform();
 
@@ -203,8 +201,8 @@ public class RS_PracticePage {
 			if (displayedMonthYear.contains(targetMonth) && displayedMonthYear.contains(targetYear)) {
 				break;
 			} else {
-				// driver.findElement(By.cssSelector(".ui-datepicker-next")).click(); // Click
-				// next month
+				// driver.findElement(By.cssSelector(".ui-datepicker-next")).click(); 
+				
 				System.out.println("Msg:: Selection of Year is not posible At this Moment");
 			}
 		}

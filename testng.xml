@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 
-<suite name="AppleTest" parallel="tests" thread-count="3">
+<suite name="AppleTest" parallel="methods" thread-count="3">
     <listeners>
        <listener class-name="listeners.RetryListener"/>
+       <listener class-name="listeners.TestListener"/>
     </listeners>
 
     <test name="ChromeAppleTest">
@@ -11,6 +12,7 @@
         <parameter name="url" value="https://www.apple.com"/>
         <classes>
             <class name="tests.AppleHomePageTest"/>
+            <class name="tests.RS_PracticPage_Test"/>
         </classes>
     </test>
 
@@ -19,7 +21,7 @@
         <parameter name="url" value="https://rahulshettyacademy.com/dropdownsPractise/"/>
         <classes>
             <class name="tests.RS_PracticPage_Test"/>
+            <class name="tests.AppleHomePageTest"/>
         </classes>
     </test>
 </suite>
-

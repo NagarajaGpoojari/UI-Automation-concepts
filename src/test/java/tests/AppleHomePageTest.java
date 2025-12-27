@@ -5,15 +5,18 @@ import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import pages.AppleHomePage;
 import utils.ConfigReader;
 import utils.DriverFactory;
+import utils.Log;
 
+@Listeners(listeners.TestListener.class)
 public class AppleHomePageTest extends BaseTest {
 
 	AppleHomePage home;
-
+	
 	@BeforeMethod
 	public void setUp() {
 		
@@ -29,7 +32,9 @@ public class AppleHomePageTest extends BaseTest {
 	}
 
 	@Test(retryAnalyzer = retry.RetryAnalyzer.class,priority=1, enabled=true)
+	
 	public void userSignInTest() {
+		Log.info("Starting login test");
 		String userName = "UserName";
 		String password = "Password";
 		home.userSignIn(userName, password);

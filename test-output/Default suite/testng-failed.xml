@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="tests.RS_PracticPage_Test">
+      <class name="tests.MacPage_Tests">
         <methods>
-          <include name="testBookingFlow"/>
           <include name="setUp"/>
           <include name="tearDown"/>
+          <include name="Verify_ExploreAllLink_VisibleAndClickable"/>
         </methods>
-      </class> <!-- tests.RS_PracticPage_Test -->
+      </class> <!-- tests.MacPage_Tests -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -1,0 +1,1 @@
+{"total":2,"items":[{"uid":"ec246b31f8fc402e8c3155ce50601415","name":"AppleTest","statistic":{"failed":0,"broken":9,"skipped":0,"passed":10,"unknown":0,"total":19}},{"uid":"2c8837b97293ea01a164a5cd7048ad56","name":"Default suite","statistic":{"failed":0,"broken":3,"skipped":0,"passed":7,"unknown":1,"total":11}}]}

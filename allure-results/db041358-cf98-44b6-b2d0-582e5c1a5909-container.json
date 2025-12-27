@@ -1,0 +1,1 @@
+{"uuid":"db041358-cf98-44b6-b2d0-582e5c1a5909","name":"tests.MacPage_Tests.setUp","children":["87678b27-3693-43b5-936a-a6df2912ab05"],"description":"","befores":[{"name":"setUp","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1766760966829,"stop":1766760968611}],"afters":[],"start":1766760966829,"stop":1766760968611}

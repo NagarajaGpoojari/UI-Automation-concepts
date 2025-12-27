@@ -1,0 +1,9 @@
+org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=143.0.7499.109)
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [0f0ef8d7132a1e2a461f3c663042b259, clickElement {id=f.0CA4137C9F12B63108AC1DF25B45D328.d.28E8750E990A50224B357C50FB82A424.e.30}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.109, chrome: {chromedriverVersion: 143.0.7499.146 (c1224fc40c9..., userDataDir: C:\Users\Admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51940}, goog:processID: 22664, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51940/devtoo..., se:cdpVersion: 143.0.7499.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (0f0ef8d7132a1e2a461f3c663042b259)] -> xpath: //input[@aria-label="Search apple.com"]]
+Session ID: 0f0ef8d7132a1e2a461f3c663042b259

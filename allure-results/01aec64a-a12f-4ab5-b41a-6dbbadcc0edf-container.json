@@ -1,0 +1,1 @@
+{"uuid":"01aec64a-a12f-4ab5-b41a-6dbbadcc0edf","name":"tests.RS_PracticPage_Test.setUp","children":["5df45d57-9cc4-4a81-8627-0d010ef98e31"],"description":"","befores":[{"name":"setUp","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1765985470840,"stop":1765985480461}],"afters":[],"start":1765985470839,"stop":1765985480461}
