@@ -17,7 +17,7 @@ AppleTest/
 ├── allure.properties      # Allure config
 
 Clone the repository:
-git clone https://github.com/NagarajaGpoojari/AppleTest.git
+https://github.com/NagarajaGpoojari/UI-Automation-concepts.git
 
 Run tests: mvn clean test
 Allure Report : allure serve allure-results
